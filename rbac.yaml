@@ -15,6 +15,7 @@ rules:
     resources:
       - subscriptions
     verbs:
+      - create
       - get
       - list
       - watch
