@@ -4,12 +4,7 @@ metadata:
   name: app-placement
   namespace: application
 spec:
-  numberOfClusters: 2
-
-  # Cluster selector to match the specific clusters
-  clusterSelector:
-    matchLabels:
-      cluster.open-cluster-management.io/cluster-name: cluster1
+  numberOfClusters: 1
 
   tolerations:
     - key: cluster.open-cluster-management.io/unreachable
