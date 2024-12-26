@@ -32,4 +32,16 @@ roleRef:
   name: klusterlet-work-sa-role
   apiGroup: rbac.authorization.k8s.io
 ---
-
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: klusterlet-work-sa-binding
+  namespace: application # Ensure it's in the correct namespace
+subjects:
+  - kind: ServiceAccount
+    name: klusterlet-work-sa
+    namespace: open-cluster-management-agent # The SA is in this namespace
+roleRef:
+  kind: Role
+  name: klusterlet-work-sa-role # Role defined above
+  apiGroup: rbac.authorization.k8s.io
