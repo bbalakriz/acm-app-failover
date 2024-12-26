@@ -23,6 +23,7 @@ k create namespace application
 k config use-context kind-cluster2
 k create namespace application
 
+k config use-context kind-hub
 k apply -f managedclustersetbinding.yaml
 k apply -f placement.yaml
 ```
