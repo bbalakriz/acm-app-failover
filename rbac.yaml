@@ -1,0 +1,35 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  # Name of the role
+  name: klusterlet-work-sa-role
+rules:
+  - apiGroups: [""]
+    resources:
+      - namespaces
+    verbs:
+      - get
+      - list
+      - watch
+  - apiGroups: ["apps.open-cluster-management.io"]
+    resources:
+      - subscriptions
+    verbs:
+      - get
+      - list
+      - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: klusterlet-work-sa-binding
+subjects:
+  - kind: ServiceAccount
+    name: klusterlet-work-sa
+    namespace: open-cluster-management-agent
+roleRef:
+  kind: ClusterRole
+  name: klusterlet-work-sa-role
+  apiGroup: rbac.authorization.k8s.io
+---
+
