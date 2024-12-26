@@ -1,9 +1,16 @@
-```kind delete cluster -n hub
+clean up and initial setup of ocm and managed clusters
+
+```
+kind delete cluster -n hub
 kind delete cluster -n cluster1
 kind delete cluster -n cluster2
+
+curl -L https://raw.githubusercontent.com/open-cluster-management-io/OCM/main/solutions/setup-dev-environment/local-up.sh | bash
 ```
 
 ---
+
+clusterlet and addons creation
 
 ```
 clusteradm install hub-addon --names application-manager
