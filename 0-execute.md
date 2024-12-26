@@ -26,9 +26,9 @@ clusteradm addon enable --names application-manager --clusters cluster2
 ManagedclusterSet setup
 
 ```
-clusteradm create clusterset app-clusterset
-clusteradm clusterset set app-clusterset --clusters cluster1
-clusteradm clusterset set app-clusterset --clusters cluster2
+# clusteradm create clusterset app-clusterset
+# clusteradm clusterset set app-clusterset --clusters cluster1
+# clusteradm clusterset set app-clusterset --clusters cluster2
 k apply -f 01-namespace.yaml
 k apply -f 01-managedclustersetbinding.yaml
 
