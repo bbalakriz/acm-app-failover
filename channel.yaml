@@ -4,5 +4,5 @@ metadata:
   name: app-channel
   namespace: application
 spec:
-  type: Namespace
-  pathname: application
+  type: Git
+  pathname: https://github.com/bbalakriz/acm-app-failover/deployment.yaml
