@@ -3,6 +3,6 @@ apiVersion: cluster.open-cluster-management.io/v1beta2
 kind: ManagedClusterSetBinding
 metadata:
   name: app-clusterset
-  namespace: application # Same as the namespace of the Placement
+  namespace: default # Same as the namespace of the Placement
 spec:
   clusterSet: app-clusterset # Match the ManagedClusterSet name

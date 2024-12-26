@@ -5,4 +5,4 @@ metadata:
   namespace: application
 spec:
   type: Git
-  pathname: https://github.com/bbalakriz/acm-app-failover-deployment.git
+  pathname: https://github.com/bbalakriz/acm-app-failover.git

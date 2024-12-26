@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-deployment
+  namespace: application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello # This label matches the label in the packageFilter
+  template:
+    metadata:
+      labels:
+        app: hello # Ensure the label matches both in the packageFilter and Deployment spec
+    spec:
+      containers:
+        - name: hello
+          image: busybox
+          command: ["sh", "-c", 'echo "Hello, Kubernetes!" && sleep 3600']
