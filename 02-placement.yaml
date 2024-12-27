@@ -8,7 +8,7 @@ spec:
   clusterSets:
     - default
 
-  # tolerations:
-  #   - key: cluster.open-cluster-management.io/unreachable
-  #     operator: Exists
-  #     tolerationSeconds: 10
+  tolerations:
+    - key: cluster.open-cluster-management.io/unreachable
+      operator: Exists
+      tolerationSeconds: 10
