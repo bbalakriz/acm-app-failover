@@ -37,11 +37,11 @@ k apply -f 01-managedclustersetbinding.yaml
 ---
 
 ```
-k config use-context kind-cluster1
-k apply -f rbac.yaml
+# k config use-context kind-cluster1
+# k apply -f rbac.yaml
 
-k config use-context kind-cluster2
-k apply -f rbac.yaml
+# k config use-context kind-cluster2
+# k apply -f rbac.yaml
 
 k config use-context kind-hub
 k apply -f 01-channel.yaml
@@ -50,6 +50,8 @@ k apply -f 02-subscription.yaml
 ```
 
 ---
+
+Check placement decisions
 
 ```
 clusteradm get placements -otable
